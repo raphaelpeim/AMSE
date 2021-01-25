@@ -1,2 +1,7 @@
 # AMSE
-Repository for AMSE UV
+
+There are the folders of the repository :
+  - Android
+  - iOS
+  - OS
+  - Web
