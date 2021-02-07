@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Fond d'ecran"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/etoilefond" />
+
+    <FrameLayout
+        android:id="@+id/game"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="120dp"
+        tools:layout_editor_absoluteX="95dp">
+
+        <ImageView
+            android:id="@+id/asteroid1"
+            android:translationX="200dp"
+            android:translationY="300dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/asteroid1" />
+
+        <ImageView
+            android:id="@+id/asteroid2"
+            android:translationX="100dp"
+            android:translationY="200dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/asteroid2" />
+
+        <ImageView
+            android:id="@+id/spaceShip"
+            android:translationX="145dp"
+            android:translationY="550dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/millenium_condor" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/joystick"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game">
+
+        <ImageView
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:translationY="28px"
+            app:srcCompat="@drawable/pad_center" />
+
+        <ImageView
+            android:id="@+id/buttonBorder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/pad_exterior" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
