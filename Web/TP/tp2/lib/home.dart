@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'exercice1.dart';
 import 'exercice2.dart';
+import 'exercice3.dart';
 
 class HomeWidget extends StatefulWidget {
   HomeWidget({Key key}) : super(key: key);
@@ -14,7 +15,7 @@ class _HomeWidgetState extends State<HomeWidget> {
   final List<String> subtitles = <String>[
     'Show an image',
     'Transform an image',
-    // 'Menu and navigation',
+    'Menu and navigation',
     // 'Show a tile',
     // 'Generate a tile board game',
     // 'Animate a tile',
@@ -23,6 +24,7 @@ class _HomeWidgetState extends State<HomeWidget> {
   final List<Widget> widgets = <Widget>[
     Exercice1(),
     Exercice2(),
+    Exercice3(),
   ];
 
   @override
