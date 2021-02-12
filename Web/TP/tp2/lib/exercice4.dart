@@ -33,7 +33,6 @@ class Exercice4 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Exercice 4'),
-        centerTitle: true,
       ),
       body: Center(
           child: Column(children: [
