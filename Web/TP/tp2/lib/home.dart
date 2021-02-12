@@ -4,6 +4,7 @@ import 'exercice2.dart';
 import 'exercice3.dart';
 import 'exercice4.dart';
 import 'exercice5a.dart';
+import 'exercice5b.dart';
 
 class HomeWidget extends StatefulWidget {
   HomeWidget({Key key}) : super(key: key);
@@ -28,6 +29,7 @@ class _HomeWidgetState extends State<HomeWidget> {
     'Menu and navigation',
     'Display a tile',
     'Grid of colored tiles',
+    'Grid with an image',
   ];
   final List<Widget> widgets = <Widget>[
     Exercice1(),
@@ -35,6 +37,7 @@ class _HomeWidgetState extends State<HomeWidget> {
     Exercice3(),
     Exercice4(),
     Exercice5a(),
+    Exercice5b(),
   ];
 
   @override
@@ -52,11 +55,9 @@ class _HomeWidgetState extends State<HomeWidget> {
               padding: const EdgeInsets.all(8),
               itemCount: subtitles.length,
               itemBuilder: (BuildContext context, int index) {
-                var exerciceNumber = index + 1;
-
                 return Card(
                   child: ListTile(
-                    title: Text('Exercice $exerciceNumber'),
+                    title: Text(titles[index]),
                     subtitle: Text(subtitles[index]),
                     trailing: Icon(Icons.play_arrow),
                     onTap: () {
