@@ -32,7 +32,7 @@ class _Exercice1State extends State<Exercice1> {
             ),
             title: Text('Exercice 1'),
           ),
-          body: Image(image: AssetImage(_assetName)),
+          body: Center(child: Image(image: AssetImage(_assetName))),
         ));
   }
 }
