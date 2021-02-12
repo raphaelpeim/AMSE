@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AboutList extends StatefulWidget {
-  AboutList({Key key}) : super(key: key);
+class MyList extends StatefulWidget {
+  MyList({Key key}) : super(key: key);
 
   @override
-  _AboutListState createState() => _AboutListState();
+  _MyListState createState() => _MyListState();
 }
 
-class _AboutListState extends State<AboutList> {
+class _MyListState extends State<MyList> {
   final List<String> entries = <String>['A', 'B', 'C'];
   final List<int> colorCodes = <int>[600, 500, 100];
 

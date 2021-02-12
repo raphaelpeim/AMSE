@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'list_widget.dart';
+import 'home.dart';
+import 'films.dart';
+import 'series.dart';
 
 class NavBar extends StatefulWidget {
   NavBar({Key key}) : super(key: key);
@@ -10,19 +12,10 @@ class NavBar extends StatefulWidget {
 
 class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
-  static const String url =
-      "https://lh3.googleusercontent.com/proxy/XX--ymxIFoWZ-J0rd24jfvl7CDCwAXJ5FtkEyV0tLqbJy1AwfhnwVml884JjToMe2zmCo_fmQyYSsMmzhWDiUm6SfgvDB9fgzTF9XbAN3EB3lAPPmX8g8qwgJlxl8cQSaR_90_vYYlryJVnNHBVITTtzSAGbCw";
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Home',
-      style: optionStyle,
-    ),
-    Image(
-      image: NetworkImage(url),
-    ),
-    AboutList(),
+    HomeWidget(),
+    FilmWidget(),
+    SerieWidget(),
   ];
 
   void _onItemTapped(int index) {
@@ -41,18 +34,18 @@ class _NavBarState extends State<NavBar> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.phonelink),
-            label: 'Media',
+            icon: Icon(Icons.local_movies),
+            label: 'Films',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'About',
+            icon: Icon(Icons.subscriptions),
+            label: 'Series',
           ),
         ],
         currentIndex: _selectedIndex,
