@@ -3,6 +3,7 @@ import 'exercice1.dart';
 import 'exercice2.dart';
 import 'exercice3.dart';
 import 'exercice4.dart';
+import 'exercice5a.dart';
 
 class HomeWidget extends StatefulWidget {
   HomeWidget({Key key}) : super(key: key);
@@ -13,20 +14,27 @@ class HomeWidget extends StatefulWidget {
 
 class _HomeWidgetState extends State<HomeWidget> {
   final _title = 'TP2';
+  final List<String> titles = <String>[
+    'Exercice 1',
+    'Exercice 2',
+    'Exercice 3',
+    'Exercice 4',
+    'Exercice 5a',
+    'Exercice 5b',
+  ];
   final List<String> subtitles = <String>[
     'Show an image',
     'Transform an image',
     'Menu and navigation',
-    'Show a tile',
-    // 'Generate a tile board game',
-    // 'Animate a tile',
-    // 'Taquin game',
+    'Display a tile',
+    'Grid of colored tiles',
   ];
   final List<Widget> widgets = <Widget>[
     Exercice1(),
     Exercice2(),
     Exercice3(),
     Exercice4(),
+    Exercice5a(),
   ];
 
   @override
