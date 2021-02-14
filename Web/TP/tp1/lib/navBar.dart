@@ -18,17 +18,11 @@ class _NavBarState extends State<NavBar> {
     SerieWidget(),
   ];
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Mon application'),
+        title: const Text('TP1'),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -53,5 +47,11 @@ class _NavBarState extends State<NavBar> {
         onTap: _onItemTapped,
       ),
     );
+  }
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
   }
 }

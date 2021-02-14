@@ -1,27 +1,40 @@
 import 'package:flutter/material.dart';
+import 'details.dart';
 
-class MyList extends StatefulWidget {
-  MyList({Key key}) : super(key: key);
+class MediaList extends StatelessWidget {
+  MediaList({Key key, this.titles, this.images, this.descriptions})
+      : super(key: key);
 
-  @override
-  _MyListState createState() => _MyListState();
-}
-
-class _MyListState extends State<MyList> {
-  final List<String> entries = <String>['A', 'B', 'C'];
-  final List<int> colorCodes = <int>[600, 500, 100];
+  final titles;
+  final images;
+  final descriptions;
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        padding: const EdgeInsets.all(8),
-        itemCount: entries.length,
-        itemBuilder: (BuildContext context, int index) {
-          return Container(
-            height: 50,
-            color: Colors.amber[colorCodes[index]],
-            child: Center(child: Text('Entry ${entries[index]}')),
-          );
-        });
+    return GridView.count(
+      primary: false,
+      padding: const EdgeInsets.all(10),
+      crossAxisSpacing: 10,
+      mainAxisSpacing: 10,
+      crossAxisCount: 2,
+      children: List.generate(titles.length, (index) {
+        return ListTile(
+          title: Image(
+            image: AssetImage(images[index]),
+          ),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Details(
+                    title: titles[index],
+                    image: Image(image: AssetImage(images[index])),
+                    description: descriptions[index]),
+              ),
+            );
+          },
+        );
+      }),
+    );
   }
 }
