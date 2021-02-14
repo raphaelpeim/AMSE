@@ -46,23 +46,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - 'images/films/apollo13.jpg'
-    - 'images/films/bigFish.jpg'
-    - 'images/films/billyElliot.jpg'
-    - 'images/films/imitationGame.jpg'
-    - 'images/films/octoberSky.jpg'
-    - 'images/films/pride.jpg'
-    - 'images/films/socialNetwork.jpg'
-    - 'images/films/theoryOfEverything.jpg'
-
-    - 'images/series/breakingBad.jpg'
-    - 'images/series/friends.jpg'
-    - 'images/series/gameOfThrones.jpg'
-    - 'images/series/himym.jpg'
-    - 'images/series/peakyBlinders.jpg'
-    - 'images/series/queensGambit.png'
-    - 'images/series/rickAndMorty.jpg'
-    - 'images/series/southPark.jpg'
+    - 'images/films/'
+    - 'images/series/'
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
