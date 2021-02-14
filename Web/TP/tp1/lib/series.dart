@@ -25,7 +25,7 @@ class _SerieWidgetState extends State<SerieWidget> {
     'images/series/gameOfThrones.jpg',
     'images/series/himym.jpg',
     'images/series/peakyBlinders.jpg',
-    'images/series/queensGambit.jpg',
+    'images/series/queensGambit.png',
     'images/series/rickAndMorty.jpg',
     'images/series/southPark.jpg',
   ];
