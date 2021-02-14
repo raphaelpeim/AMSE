@@ -11,7 +11,16 @@ class _HomeWidgetState extends State<HomeWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Text(
-            'Bienvenue sur l\'application TP1\nUne bibliothèque de films et séries'));
+        padding: EdgeInsets.all(10),
+        child: Column(children: [
+          Text(
+            'Bienvenue !\n',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50),
+          ),
+          Text(
+            'En cliquant sur "media" dans la barre de navigation, vous avez accès à plusieurs catégories de médias.\n\n Ensuite dans chacune des catégories, il y a une liste d\'éléments sur lesquels vous pouvez cliquer pour en savoir plus',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+          )
+        ]));
   }
 }
