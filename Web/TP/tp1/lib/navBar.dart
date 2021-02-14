@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
-import 'films.dart';
-import 'series.dart';
+import 'medias.dart';
 
 class NavBar extends StatefulWidget {
   NavBar({Key key}) : super(key: key);
@@ -14,8 +13,7 @@ class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
   static List<Widget> _widgetOptions = <Widget>[
     HomeWidget(),
-    FilmWidget(),
-    SerieWidget(),
+    Medias(),
   ];
 
   @override
@@ -34,12 +32,8 @@ class _NavBarState extends State<NavBar> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.local_movies),
-            label: 'Films',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.subscriptions),
-            label: 'Series',
+            icon: Icon(Icons.devices),
+            label: 'Media',
           ),
         ],
         currentIndex: _selectedIndex,

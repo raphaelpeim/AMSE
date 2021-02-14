@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HomeWidget extends StatefulWidget {
-  HomeWidget({Key key}) : super(key: key);
-
-  @override
-  _HomeWidgetState createState() => _HomeWidgetState();
-}
-
-class _HomeWidgetState extends State<HomeWidget> {
+class HomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

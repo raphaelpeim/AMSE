@@ -1,15 +1,8 @@
 import 'package:flutter/material.dart';
-import 'list.dart';
+import 'mediaList.dart';
 
-class SerieWidget extends StatefulWidget {
-  SerieWidget({Key key}) : super(key: key);
-
-  @override
-  _SerieWidgetState createState() => _SerieWidgetState();
-}
-
-class _SerieWidgetState extends State<SerieWidget> {
-  List<String> seriesTitles = <String>[
+class SerieWidget extends StatelessWidget {
+  final List<String> seriesTitles = <String>[
     'Breaking Bad',
     'Friends',
     'Game Of Thrones',
@@ -19,7 +12,7 @@ class _SerieWidgetState extends State<SerieWidget> {
     'Rick And Morty',
     'South Park',
   ];
-  List<String> seriesImages = <String>[
+  final List<String> seriesImages = <String>[
     'images/series/breakingBad.jpg',
     'images/series/friends.jpg',
     'images/series/gameOfThrones.jpg',
@@ -29,7 +22,7 @@ class _SerieWidgetState extends State<SerieWidget> {
     'images/series/rickAndMorty.jpg',
     'images/series/southPark.jpg',
   ];
-  List<String> seriesDescriptions = <String>[
+  final List<String> seriesDescriptions = <String>[
     'Breaking Bad, ou Breaking Bad : Le Chimiste au Québec, est une série télévisée américaine en 62 épisodes de 47 minutes, créée par Vince Gilligan, diffusée simultanément du 20 janvier 2008 au 29 septembre 2013 sur AMC aux États-Unis et au Canada, et ensuite sur Netflix.',
     'Friends [fɹɛn(d)z] est une sitcom américaine en 10 saisons2, avec 236 épisodes de 22 minutes, créée par Marta Kauffman et David Crane, et diffusée entre le 22 septembre 1994 et le 6 mai 2004 sur le réseau NBC.',
     'Game of Thrones [geɪm əv θɹoʊnz], également appelée Le Trône de fer (selon le titre français de l\'œuvre romanesque dont elle est adaptée) est une série télévisée américaine de Fantasy créée par David Benioff et D. B. Weiss, diffusée entre le 17 avril 2011 et le 19 mai 2019 sur HBO aux États-Unis en simultané sur HBO Canada au Canada.',
@@ -43,6 +36,7 @@ class _SerieWidgetState extends State<SerieWidget> {
   @override
   Widget build(BuildContext context) {
     return MediaList(
+        title: 'Series',
         titles: seriesTitles,
         images: seriesImages,
         descriptions: seriesDescriptions);

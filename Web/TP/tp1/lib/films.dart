@@ -1,15 +1,8 @@
 import 'package:flutter/material.dart';
-import 'list.dart';
+import 'mediaList.dart';
 
-class FilmWidget extends StatefulWidget {
-  FilmWidget({Key key}) : super(key: key);
-
-  @override
-  _FilmWidgetState createState() => _FilmWidgetState();
-}
-
-class _FilmWidgetState extends State<FilmWidget> {
-  List<String> filmsTitles = <String>[
+class FilmWidget extends StatelessWidget {
+  final List<String> filmsTitles = <String>[
     'Apollo 13',
     'Big Fish',
     'Billy Elliot',
@@ -19,7 +12,7 @@ class _FilmWidgetState extends State<FilmWidget> {
     'The Social Network',
     'The Theory Of Everything',
   ];
-  List<String> filmsImages = <String>[
+  final List<String> filmsImages = <String>[
     'images/films/apollo13.jpg',
     'images/films/bigFish.jpg',
     'images/films/billyElliot.jpg',
@@ -29,7 +22,7 @@ class _FilmWidgetState extends State<FilmWidget> {
     'images/films/socialNetwork.jpg',
     'images/films/theoryOfEverything.jpg',
   ];
-  List<String> filmsDescriptions = <String>[
+  final List<String> filmsDescriptions = <String>[
     'Apollo 13 est un film catastrophe américain réalisé par Ron Howard, sorti en 1995. Il s\'agit d\'une adaptation du livre Lost Moon: The Perilous Voyage of Apollo 13 (1994), écrit par James « Jim » Lovell, qui fut le commandant de la mission spatiale Apollo 13, et Jeffrey Kluger.',
     'Big Fish ou Big Fish : La Légende du gros poisson au Québec, est un film fantastique américain de Tim Burton, écrit par John August et sorti en 2003.',
     'Billy Elliot est une comédie dramatique britannique réalisée par Stephen Daldry sur un scénario de Lee Hall, mettant en scène Jamie Bell dans le rôle-titre, Julie Walters en Mme Wilkinson, le professeur de danse, Gary Lewis, le père mineur en grève, et Jamie Draven, le frère aîné de Billy Elliot.',
@@ -43,6 +36,7 @@ class _FilmWidgetState extends State<FilmWidget> {
   @override
   Widget build(BuildContext context) {
     return MediaList(
+        title: 'Films',
         titles: filmsTitles,
         images: filmsImages,
         descriptions: filmsDescriptions);
