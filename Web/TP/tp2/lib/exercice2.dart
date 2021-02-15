@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'slider.dart';
-import 'home.dart';
 
 class Exercice2 extends StatefulWidget {
   Exercice2({Key key}) : super(key: key);
@@ -17,16 +16,6 @@ class _Exercice2State extends State<Exercice2> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          leading: BackButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HomeWidget(),
-                ),
-              );
-            },
-          ),
           title: Text('Exercice 2'),
         ),
         body: Container(

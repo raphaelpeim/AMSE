@@ -1,15 +1,7 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
 
-class Exercice5a extends StatefulWidget {
-  Exercice5a({Key key}) : super(key: key);
-
-  @override
-  _Exercice5aState createState() => _Exercice5aState();
-}
-
-class _Exercice5aState extends State<Exercice5a> {
-  List<Color> tilesColor = <Color>[
+class Exercice5a extends StatelessWidget {
+  final List<Color> tilesColor = <Color>[
     Colors.blue[800],
     Colors.green[200],
     Colors.green,
@@ -25,16 +17,6 @@ class _Exercice5aState extends State<Exercice5a> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          leading: BackButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HomeWidget(),
-                ),
-              );
-            },
-          ),
           title: Text('Exercice 5a'),
         ),
         body: GridView.count(

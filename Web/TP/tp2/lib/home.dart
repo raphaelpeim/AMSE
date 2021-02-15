@@ -6,15 +6,8 @@ import 'exercice4.dart';
 import 'exercice5a.dart';
 import 'exercice5b.dart';
 
-class HomeWidget extends StatefulWidget {
-  HomeWidget({Key key}) : super(key: key);
-
-  @override
-  _HomeWidgetState createState() => _HomeWidgetState();
-}
-
-class _HomeWidgetState extends State<HomeWidget> {
-  final _title = 'TP2';
+class HomeWidget extends StatelessWidget {
+  final String _title = 'TP2';
   final List<String> titles = <String>[
     'Exercice 1',
     'Exercice 2',
