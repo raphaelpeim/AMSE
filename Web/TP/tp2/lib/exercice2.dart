@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'image.dart';
 import 'slider.dart';
 
 class Exercice2 extends StatefulWidget {
@@ -9,8 +10,8 @@ class Exercice2 extends StatefulWidget {
 }
 
 class _Exercice2State extends State<Exercice2> {
-  var _assetName = 'images/starwars.jpg';
-  var _currentValue = true;
+  Widget image = MyImage(asset: 'images/starwars.jpg');
+  bool _currentValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -23,14 +24,43 @@ class _Exercice2State extends State<Exercice2> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image(image: AssetImage(_assetName)),
+              image,
               Table(
                 columnWidths: {0: FlexColumnWidth(1), 1: FlexColumnWidth(4)},
                 defaultVerticalAlignment: TableCellVerticalAlignment.middle,
                 children: [
-                  TableRow(children: [Text('Rotate X : '), MySlider()]),
-                  TableRow(children: [Text('Rotate Z : '), MySlider()]),
-                  TableRow(children: [Text('Scale : '), MySlider()]),
+                  TableRow(children: [
+                    Text('Rotate X : '),
+                    MySlider(
+                      image: image,
+                      max: 314,
+                      divisions: 314,
+                    )
+                  ]),
+                  TableRow(children: [
+                    Text('Rotate Y : '),
+                    MySlider(
+                      image: image,
+                      max: 314,
+                      divisions: 314,
+                    )
+                  ]),
+                  TableRow(children: [
+                    Text('Rotate Z : '),
+                    MySlider(
+                      image: image,
+                      max: 314,
+                      divisions: 314,
+                    )
+                  ]),
+                  TableRow(children: [
+                    Text('Scale : '),
+                    MySlider(
+                      image: image,
+                      max: 314,
+                      divisions: 314,
+                    )
+                  ]),
                   TableRow(children: [
                     Text('Mirror : '),
                     Checkbox(
