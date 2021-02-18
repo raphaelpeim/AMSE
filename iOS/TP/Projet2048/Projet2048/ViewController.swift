@@ -11,10 +11,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var cells: UICollectionView!
     
-    let rowsNumber = 4
-    let columnsNumber = 4
+    var rowsNumber = 4
+    var columnsNumber = 4
     var gameCells: [[GameCell?]]
-    let spaceBetweenCells = 2
+    var spaceBetweenCells = 10
     
     required convenience init?(coder aDecoder: NSCoder) {
         self.init(coder: aDecoder, rowsNumber: 4, columnsNumber: 4)
@@ -63,6 +63,22 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return columnsNumber
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width:0, height:CGFloat(spaceBetweenCells))
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (cells.frame.width - CGFloat(spaceBetweenCells * (columnsNumber+2))) / CGFloat(columnsNumber), height: (cells.frame.height - CGFloat(spaceBetweenCells * (rowsNumber+2))) / CGFloat(columnsNumber))
+    }
+    
+    @IBAction func fill() {
+        for i in 0...3 {
+            for j in 0...3 {
+                gameCells[i][j]!.value = Int(pow(2, Double(j+i*j)))
+            }
+        }
     }
 }
 

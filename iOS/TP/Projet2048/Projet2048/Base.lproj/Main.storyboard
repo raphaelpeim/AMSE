@@ -42,14 +42,14 @@
                                 <rect key="frame" x="181" y="653" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Remplir"/>
+                                <connections>
+                                    <action selector="fill" destination="BYZ-38-t0r" eventType="touchDown" id="Pyd-6D-dRz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <connections>
-                        <outlet property="collectionView" destination="6mx-SI-sMT" id="AxJ-ZL-Cgh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
