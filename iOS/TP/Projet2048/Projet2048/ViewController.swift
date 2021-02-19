@@ -24,7 +24,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.rowsNumber = rowsNumber
         self.columnsNumber = columnsNumber
         gameCells = [[]]
-        gameCells = ([[GameCell?]](repeating: [], count: rowsNumber-1))
+        gameCells = ([[GameCell?]](repeating: [], count: rowsNumber))
         
         for i in 1...rowsNumber {
             let line = [GameCell?](repeating: nil, count: columnsNumber)
