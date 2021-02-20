@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'exercice4.dart';
 
 class Exercice5b extends StatelessWidget {
-  final List<Color> tilesColor = <Color>[
-    Colors.blue[800],
-    Colors.green[200],
-    Colors.green,
-    Colors.red[300],
-    Colors.purple[900],
-    Colors.blue[900],
-    Colors.red[900],
-    Colors.green[300],
-    Colors.blue[400],
+  final List<List<double>> positions = <List<double>>[
+    [-1, -1],
+    [0, -1],
+    [1, -1],
+    [-1, 0],
+    [0, 0],
+    [1, 0],
+    [-1, 1],
+    [0, 1],
+    [1, 1],
   ];
 
   @override
@@ -21,17 +22,17 @@ class Exercice5b extends StatelessWidget {
         ),
         body: GridView.count(
             primary: false,
-            padding: const EdgeInsets.all(20),
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
+            padding: const EdgeInsets.all(5),
             crossAxisCount: 3,
             children: List.generate(9, (index) {
-              var tileNumber = index + 1;
+              Tile tile = new Tile(
+                  image: Image(image: AssetImage('images/starwars.jpg')),
+                  alignment:
+                      Alignment(positions[index][0], positions[index][1]));
 
               return Container(
-                padding: const EdgeInsets.all(8),
-                child: Center(child: Text('Tile $tileNumber')),
-                color: tilesColor[index],
+                padding: const EdgeInsets.all(2),
+                child: tile.croppedImageTile(),
               );
             })));
   }

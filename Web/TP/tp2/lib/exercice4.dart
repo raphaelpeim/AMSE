@@ -13,8 +13,8 @@ class Tile {
         child: Container(
           child: Align(
             alignment: this.alignment,
-            widthFactor: 0.3,
-            heightFactor: 0.3,
+            widthFactor: 1 / 3,
+            heightFactor: 1 / 3,
             child: image,
           ),
         ),
@@ -25,7 +25,7 @@ class Tile {
 
 Tile tile = new Tile(
     image: Image(image: AssetImage('images/starwars.jpg')),
-    alignment: Alignment(0, 0));
+    alignment: Alignment(-1, -1));
 
 class Exercice4 extends StatelessWidget {
   @override
