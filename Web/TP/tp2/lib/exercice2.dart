@@ -10,8 +10,7 @@ class Exercice2 extends StatefulWidget {
 }
 
 class _Exercice2State extends State<Exercice2> {
-  Widget image = MyImage(asset: 'images/starwars.jpg');
-  bool _currentValue = false;
+  MyImage image = MyImage(asset: 'images/starwars.jpg');
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +23,7 @@ class _Exercice2State extends State<Exercice2> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              image,
+              image.build(),
               Table(
                 columnWidths: {0: FlexColumnWidth(1), 1: FlexColumnWidth(4)},
                 defaultVerticalAlignment: TableCellVerticalAlignment.middle,
@@ -32,44 +31,33 @@ class _Exercice2State extends State<Exercice2> {
                   TableRow(children: [
                     Text('Rotate X : '),
                     MySlider(
-                      image: image,
-                      max: 314,
-                      divisions: 314,
+                      max: 628,
+                      divisions: 628,
+                      callback: setX,
                     )
                   ]),
                   TableRow(children: [
                     Text('Rotate Y : '),
                     MySlider(
-                      image: image,
-                      max: 314,
-                      divisions: 314,
+                      max: 628,
+                      divisions: 628,
+                      callback: setY,
                     )
                   ]),
                   TableRow(children: [
                     Text('Rotate Z : '),
                     MySlider(
-                      image: image,
-                      max: 314,
-                      divisions: 314,
+                      max: 628,
+                      divisions: 628,
+                      callback: setZ,
                     )
                   ]),
                   TableRow(children: [
                     Text('Scale : '),
                     MySlider(
-                      image: image,
-                      max: 314,
-                      divisions: 314,
-                    )
-                  ]),
-                  TableRow(children: [
-                    Text('Mirror : '),
-                    Checkbox(
-                      value: _currentValue,
-                      onChanged: (bool newValue) {
-                        setState(() {
-                          _currentValue = newValue;
-                        });
-                      },
+                      max: 100,
+                      divisions: 100,
+                      callback: setS,
                     )
                   ]),
                 ],
@@ -77,5 +65,29 @@ class _Exercice2State extends State<Exercice2> {
             ],
           ),
         ));
+  }
+
+  void setX(double newX) {
+    setState(() {
+      image.x = newX / 100;
+    });
+  }
+
+  void setY(double newY) {
+    setState(() {
+      image.y = newY / 100;
+    });
+  }
+
+  void setZ(double newZ) {
+    setState(() {
+      image.z = newZ / 100;
+    });
+  }
+
+  void setS(double newS) {
+    setState(() {
+      image.s = newS / 100;
+    });
   }
 }

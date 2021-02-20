@@ -1,44 +1,23 @@
 import 'package:flutter/material.dart';
 
-class MyImage extends StatefulWidget {
+class MyImage {
   final String asset;
 
-  MyImage({Key key, this.asset}) : super(key: key);
+  MyImage({Key key, this.asset});
 
-  @override
-  _MyImageState createState() => _MyImageState();
-}
+  double x = 0;
+  double y = 0;
+  double z = 0;
+  double s = 1;
 
-class _MyImageState extends State<MyImage> {
-  double x = 0.2;
-  double y = 0.2;
-  double z = 0.2;
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build() {
     return Transform(
+        alignment: FractionalOffset.center,
         transform: Matrix4.identity()
           ..rotateX(x)
           ..rotateY(y)
           ..rotateZ(z),
-        child: Container(child: Image(image: AssetImage(widget.asset))));
-  }
-
-  void setX(double newX) {
-    setState(() {
-      x = newX;
-    });
-  }
-
-  void setY(double newY) {
-    setState(() {
-      y = newY;
-    });
-  }
-
-  void setZ(double newZ) {
-    setState(() {
-      z = newZ;
-    });
+        child:
+            Transform.scale(scale: s, child: Image(image: AssetImage(asset))));
   }
 }
