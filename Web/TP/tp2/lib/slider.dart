@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MySlider extends StatefulWidget {
-  MySlider({Key key, this.max, this.divisions, this.callback})
-      : super(key: key);
+  MySlider({Key key, this.callback}) : super(key: key);
 
-  final double max;
-  final int divisions;
   final dynamic callback;
 
   @override
@@ -20,8 +17,8 @@ class _MySliderState extends State<MySlider> {
     return Slider(
       value: _currentValue,
       min: 0,
-      max: widget.max,
-      divisions: widget.divisions,
+      max: 100,
+      divisions: 100,
       label: _currentValue.round().toString(),
       onChanged: (double value) {
         setState(() {

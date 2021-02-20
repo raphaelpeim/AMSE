@@ -31,32 +31,24 @@ class _Exercice2State extends State<Exercice2> {
                   TableRow(children: [
                     Text('Rotate X : '),
                     MySlider(
-                      max: 628,
-                      divisions: 628,
                       callback: setX,
                     )
                   ]),
                   TableRow(children: [
                     Text('Rotate Y : '),
                     MySlider(
-                      max: 628,
-                      divisions: 628,
                       callback: setY,
                     )
                   ]),
                   TableRow(children: [
                     Text('Rotate Z : '),
                     MySlider(
-                      max: 628,
-                      divisions: 628,
                       callback: setZ,
                     )
                   ]),
                   TableRow(children: [
                     Text('Scale : '),
                     MySlider(
-                      max: 100,
-                      divisions: 100,
                       callback: setS,
                     )
                   ]),
@@ -69,25 +61,25 @@ class _Exercice2State extends State<Exercice2> {
 
   void setX(double newX) {
     setState(() {
-      image.x = newX / 100;
+      image.x = newX / 100 * 6.28;
     });
   }
 
   void setY(double newY) {
     setState(() {
-      image.y = newY / 100;
+      image.y = newY / 100 * 6.28;
     });
   }
 
   void setZ(double newZ) {
     setState(() {
-      image.z = newZ / 100;
+      image.z = newZ / 100 * 6.28;
     });
   }
 
   void setS(double newS) {
     setState(() {
-      image.s = newS / 100;
+      image.s = 1 - newS / 100;
     });
   }
 }
