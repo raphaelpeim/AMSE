@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyImage {
-  final String asset;
+  String asset;
 
   MyImage({Key key, this.asset});
 
