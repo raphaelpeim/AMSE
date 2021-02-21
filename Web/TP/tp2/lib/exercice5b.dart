@@ -27,6 +27,7 @@ class Exercice5b extends StatelessWidget {
             children: List.generate(9, (index) {
               Tile tile = new Tile(
                   image: Image(image: AssetImage('images/starwars.jpg')),
+                  divisions: 3,
                   alignment:
                       Alignment(positions[index][0], positions[index][1]));
 
