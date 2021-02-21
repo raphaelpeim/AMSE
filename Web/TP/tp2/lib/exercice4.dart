@@ -3,7 +3,7 @@ import 'tile.dart';
 
 Tile tile = new Tile(
     image: Image(image: AssetImage('images/starwars.jpg')),
-    alignment: Alignment(-1, -1));
+    alignment: Alignment(0, 0));
 
 class Exercice4 extends StatelessWidget {
   @override
