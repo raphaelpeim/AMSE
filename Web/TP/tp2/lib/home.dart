@@ -5,6 +5,7 @@ import 'exercice3.dart';
 import 'exercice4.dart';
 import 'exercice5a.dart';
 import 'exercice5b.dart';
+import 'exercice5c.dart';
 
 class HomeWidget extends StatelessWidget {
   final String _title = 'TP2';
@@ -15,6 +16,7 @@ class HomeWidget extends StatelessWidget {
     'Exercice 4',
     'Exercice 5a',
     'Exercice 5b',
+    'Exercice 5c',
   ];
   final List<String> subtitles = <String>[
     'Show an image',
@@ -22,7 +24,8 @@ class HomeWidget extends StatelessWidget {
     'Menu and navigation',
     'Display a tile',
     'Grid of colored tiles',
-    'Grid with an image',
+    'Grid based on an image',
+    'Grid with size setable',
   ];
   final List<Widget> widgets = <Widget>[
     Exercice1(),
@@ -31,6 +34,7 @@ class HomeWidget extends StatelessWidget {
     Exercice4(),
     Exercice5a(),
     Exercice5b(),
+    Exercice5c(),
   ];
 
   @override
