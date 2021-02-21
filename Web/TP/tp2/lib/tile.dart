@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 class Tile {
   Image image;
+  int divisions;
   Alignment alignment;
 
-  Tile({this.image, this.alignment});
+  Tile({this.image, this.divisions, this.alignment});
 
   Widget croppedImageTile() {
     return FittedBox(
@@ -13,8 +14,8 @@ class Tile {
         child: Container(
           child: Align(
             alignment: this.alignment,
-            widthFactor: 1 / 3,
-            heightFactor: 1 / 3,
+            widthFactor: 1 / divisions,
+            heightFactor: 1 / divisions,
             child: image,
           ),
         ),
