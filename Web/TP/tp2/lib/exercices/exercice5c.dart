@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'board.dart';
+import '../widgets/board.dart';
 
 class Exercice5c extends StatefulWidget {
   Exercice5c({Key key}) : super(key: key);

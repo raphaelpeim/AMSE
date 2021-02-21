@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'image.dart';
-import 'slider.dart';
+import '../widgets/image.dart';
+import '../widgets/slider.dart';
 
 class Exercice2 extends StatefulWidget {
   Exercice2({Key key}) : super(key: key);

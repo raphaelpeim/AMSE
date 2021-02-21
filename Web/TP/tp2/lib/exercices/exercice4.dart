@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'tile.dart';
+import '../widgets/tile.dart';
 
 Tile tile = new Tile(
     image: Image(image: AssetImage('images/starwars.jpg')),

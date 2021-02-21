@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'exercice1.dart';
-import 'exercice2.dart';
-import 'exercice3.dart';
-import 'exercice4.dart';
-import 'exercice5a.dart';
-import 'exercice5b.dart';
-import 'exercice5c.dart';
+import 'exercices/exercice1.dart';
+import 'exercices/exercice2.dart';
+import 'exercices/exercice3.dart';
+import 'exercices/exercice4.dart';
+import 'exercices/exercice5a.dart';
+import 'exercices/exercice5b.dart';
+import 'exercices/exercice5c.dart';
 
 class HomeWidget extends StatelessWidget {
   final String _title = 'TP2';
