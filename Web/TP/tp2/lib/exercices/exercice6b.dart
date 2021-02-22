@@ -17,7 +17,31 @@ class _Exercice6bState extends State<Exercice6b> {
       appBar: AppBar(
         title: Text('Exercice 6b'),
       ),
-      body: board.build(),
+      body: Column(children: <Widget>[
+        board.build(),
+        Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      if (board.tilesNumber > 2) {
+                        board.tilesNumber--;
+                      }
+                    });
+                  },
+                  child: Text('-')),
+              ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      if (board.tilesNumber < 10) {
+                        board.tilesNumber++;
+                      }
+                    });
+                  },
+                  child: Text('+'))
+            ])
+      ]),
     );
   }
 }
