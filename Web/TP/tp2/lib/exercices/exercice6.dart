@@ -32,14 +32,12 @@ class TileWidget extends StatelessWidget {
   }
 }
 
-void main() => runApp(new MaterialApp(home: PositionedTiles()));
-
-class PositionedTiles extends StatefulWidget {
+class Exercice6 extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => PositionedTilesState();
+  State<StatefulWidget> createState() => Exercice6State();
 }
 
-class PositionedTilesState extends State<PositionedTiles> {
+class Exercice6State extends State<Exercice6> {
   List<Widget> tiles =
       List<Widget>.generate(2, (index) => TileWidget(Tile.randomColor()));
 
