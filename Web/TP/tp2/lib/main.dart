@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'exercices/exercice3.dart';
 
 void main() {
   runApp(MyApp());
@@ -8,6 +8,6 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return HomeWidget();
+    return Exercice3();
   }
 }
