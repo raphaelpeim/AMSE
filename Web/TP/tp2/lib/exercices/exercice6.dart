@@ -45,7 +45,7 @@ class Exercice6State extends State<Exercice6> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Moving Tiles'),
+        title: Text('Exercice 6'),
         centerTitle: true,
       ),
       body: Row(children: tiles),
