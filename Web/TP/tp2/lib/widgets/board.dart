@@ -4,24 +4,38 @@ import 'tile.dart';
 
 class Board {
   int tilesNumber = 3;
+  String imageSrc;
+  List<List<double>> positions;
+
+  Board({this.tilesNumber, this.imageSrc});
 
   Widget build() {
-    List<List<double>> positions = getPositions(tilesNumber);
+    if (imageSrc != null) positions = getPositions(tilesNumber);
 
     return GridView.count(
         shrinkWrap: true,
         padding: const EdgeInsets.all(5),
         crossAxisCount: tilesNumber,
         children: List.generate(pow(tilesNumber, 2), (index) {
-          Tile tile = new Tile(
-              image: Image(image: AssetImage('images/starwars.jpg')),
-              divisions: tilesNumber,
-              alignment: Alignment(positions[index][0], positions[index][1]));
+          if (imageSrc != null) {
+            Tile tile = new Tile(
+                image: Image(image: AssetImage(imageSrc)),
+                divisions: tilesNumber,
+                alignment: Alignment(positions[index][0], positions[index][1]));
 
-          return Container(
-            padding: const EdgeInsets.all(2),
-            child: tile.croppedImageTile(),
-          );
+            return Container(
+              padding: const EdgeInsets.all(2),
+              child: tile.croppedImageTile(),
+            );
+          } else {
+            int tileNumber = index + 1;
+
+            return Container(
+              margin: const EdgeInsets.all(2),
+              child: Center(child: Text('Tile $tileNumber')),
+              color: Colors.grey,
+            );
+          }
         }));
   }
 

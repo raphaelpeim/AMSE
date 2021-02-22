@@ -9,7 +9,7 @@ class Exercice5c extends StatefulWidget {
 }
 
 class _Exercice5cState extends State<Exercice5c> {
-  final Board board = Board();
+  final Board board = Board(imageSrc: 'images/starwars.jpg');
 
   @override
   Widget build(BuildContext context) {

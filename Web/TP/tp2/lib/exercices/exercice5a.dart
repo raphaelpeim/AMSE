@@ -26,7 +26,7 @@ class Exercice5a extends StatelessWidget {
             mainAxisSpacing: 10,
             crossAxisCount: 3,
             children: List.generate(9, (index) {
-              var tileNumber = index + 1;
+              int tileNumber = index + 1;
 
               return Container(
                 padding: const EdgeInsets.all(8),
