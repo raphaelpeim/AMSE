@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TP2</string>
+
+    <string name="backgroundDescription">Background</string>
+    <string name="asteroid1Description">Asteroid_1</string>
+    <string name="asteroid2Description">Asteroid_2</string>
+    <string name="spaceShipDescription">Space_Ship</string>
+    <string name="buttonDescription">Space_Ship</string>
+    <string name="buttonBorderDescription">Space_Ship</string>
 </resources>

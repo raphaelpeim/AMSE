@@ -11,7 +11,7 @@
         android:id="@+id/background"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="Fond d'ecran"
+        android:contentDescription="@string/backgroundDescription"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,26 +27,29 @@
 
         <ImageView
             android:id="@+id/asteroid1"
-            android:translationX="200dp"
-            android:translationY="300dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:contentDescription="@string/asteroid1Description"
+            android:translationX="200dp"
+            android:translationY="300dp"
             app:srcCompat="@drawable/asteroid1" />
 
         <ImageView
             android:id="@+id/asteroid2"
-            android:translationX="100dp"
-            android:translationY="200dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:contentDescription="@string/asteroid2Description"
+            android:translationX="100dp"
+            android:translationY="200dp"
             app:srcCompat="@drawable/asteroid2" />
 
         <ImageView
             android:id="@+id/spaceShip"
-            android:translationX="145dp"
-            android:translationY="550dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:contentDescription="@string/spaceShipDescription"
+            android:translationX="150dp"
+            android:translationY="550dp"
             app:srcCompat="@drawable/millenium_condor" />
     </FrameLayout>
 
@@ -62,13 +65,15 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:translationY="28px"
+            android:contentDescription="@string/buttonDescription"
+            android:translationY="10dp"
             app:srcCompat="@drawable/pad_center" />
 
         <ImageView
             android:id="@+id/buttonBorder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="@string/buttonBorderDescription"
             app:srcCompat="@drawable/pad_exterior" />
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
