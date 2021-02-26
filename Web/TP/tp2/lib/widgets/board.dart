@@ -4,10 +4,11 @@ import 'tile.dart';
 
 class Board {
   int tilesNumber;
+  bool game;
   String imageSrc;
   List<List<double>> positions;
 
-  Board({this.tilesNumber, this.imageSrc});
+  Board({this.tilesNumber, this.game, this.imageSrc});
 
   Widget build() {
     positions = getPositions(tilesNumber);
@@ -19,6 +20,7 @@ class Board {
         children: List.generate(pow(tilesNumber, 2), (index) {
           Tile tile = new Tile(
               id: index,
+              selected: (game && index == 0) ? true : false,
               image:
                   imageSrc == null ? null : Image(image: AssetImage(imageSrc)),
               divisions: tilesNumber,

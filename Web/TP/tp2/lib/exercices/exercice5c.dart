@@ -9,7 +9,8 @@ class Exercice5c extends StatefulWidget {
 }
 
 class _Exercice5cState extends State<Exercice5c> {
-  Board board = Board(tilesNumber: 3, imageSrc: 'images/starwars.jpg');
+  Board board =
+      Board(game: false, tilesNumber: 3, imageSrc: 'images/starwars.jpg');
 
   @override
   Widget build(BuildContext context) {

@@ -9,7 +9,7 @@ class Exercice6b extends StatefulWidget {
 }
 
 class _Exercice6bState extends State<Exercice6b> {
-  Board board = Board(tilesNumber: 4);
+  Board board = Board(game: true, tilesNumber: 4);
 
   @override
   Widget build(BuildContext context) {
