@@ -3,7 +3,7 @@ import 'dart:math';
 import 'tile.dart';
 
 class Board {
-  int tilesNumber = 3;
+  int tilesNumber;
   String imageSrc;
   List<List<double>> positions;
 
