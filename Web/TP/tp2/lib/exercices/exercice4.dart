@@ -29,7 +29,7 @@ class Exercice4 extends StatelessWidget {
 
   Widget createTileWidgetFrom(Tile tile) {
     return InkWell(
-      child: tile.croppedImageTile(),
+      child: tile.build(),
       onTap: () {
         print("tapped on tile");
       },

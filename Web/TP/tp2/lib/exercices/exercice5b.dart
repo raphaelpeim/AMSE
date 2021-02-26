@@ -33,7 +33,7 @@ class Exercice5b extends StatelessWidget {
 
               return Container(
                 padding: const EdgeInsets.all(2),
-                child: tile.croppedImageTile(),
+                child: tile.build(),
               );
             })));
   }
