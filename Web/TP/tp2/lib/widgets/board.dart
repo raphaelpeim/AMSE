@@ -7,6 +7,7 @@ class Board {
   bool game;
   String imageSrc;
   List<List<double>> positions;
+  // List<Tile> tiles;
 
   Board({this.tilesNumber, this.game, this.imageSrc});
 
@@ -25,6 +26,8 @@ class Board {
                   imageSrc == null ? null : Image(image: AssetImage(imageSrc)),
               divisions: tilesNumber,
               alignment: Alignment(positions[index][0], positions[index][1]));
+
+          // tiles.add(tile);
 
           return tile.build();
         }));
