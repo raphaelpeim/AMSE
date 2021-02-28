@@ -30,7 +30,7 @@ class Exercice3 extends StatelessWidget {
     'Grid based on an image',
     'Grid with size setable',
     'Switch two tiles',
-    'Grid Test',
+    'Grid with size settable',
     'Taquin game',
   ];
   final List<Widget> widgets = <Widget>[
