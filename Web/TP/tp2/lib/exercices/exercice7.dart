@@ -1,5 +1,5 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 Random random = new Random();
 
@@ -28,18 +28,17 @@ class Exercice7 extends StatefulWidget {
 }
 
 class _Exercice7State extends State<Exercice7> {
-  int numberOfRows;
   static int isEmptyValue;
-  List<Widget> liste;
-  bool started;
+  int numberOfRows;
   int counter;
+  bool started;
+  List<Widget> liste;
 
   @override
   void initState() {
     super.initState();
     numberOfRows = 3;
-    liste =
-        List.generate(pow(numberOfRows, 2), (index) => TileWidget(Tile(index)));
+    liste = List.generate(pow(10, 2), (index) => TileWidget(Tile(index)));
     started = false;
     counter = 0;
   }
@@ -53,10 +52,10 @@ class _Exercice7State extends State<Exercice7> {
         body: Material(
             type: MaterialType.transparency,
             child: Column(children: [
-              new Expanded(
+              Expanded(
                   child: GridView.count(
                 primary: false,
-                padding: const EdgeInsets.fromLTRB(20, 100, 20, 100),
+                padding: EdgeInsets.fromLTRB(20, 100, 20, 100),
                 crossAxisSpacing: 3,
                 mainAxisSpacing: 2,
                 crossAxisCount: numberOfRows,
@@ -75,91 +74,62 @@ class _Exercice7State extends State<Exercice7> {
                                   color:
                                       isEmptyValue == null || started == false
                                           ? Colors.transparent
-                                          : isClickable(index)
+                                          : isSwappable(index)
                                               ? Colors.red
                                               : Colors.transparent,
                                   width: 5)),
                         ),
                         onTap: () {
-                          setState(() {
-                            if (isClickable(index)) {
-                              swapTiles(index);
-                            }
-                          });
+                          swapTiles(index);
                         })),
               )),
               Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-                SizedBox(
-                    width: 40,
-                    height: 40,
-                    child: RaisedButton(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-                        color: Colors.blue,
-                        shape: RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(30))),
-                        child: IconButton(
-                            icon: Icon(Icons.horizontal_rule),
-                            color: Colors.white,
-                            onPressed: started
-                                ? null
-                                : () {
-                                    setState(() {
-                                      if (numberOfRows > 2) {
-                                        numberOfRows--;
-                                      }
-                                    });
-                                  }),
-                        onPressed: started ? null : () {})),
-                SizedBox(
-                    width: 40,
-                    height: 40,
-                    child: RaisedButton(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-                        color: Colors.blue,
-                        shape: RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(30))),
-                        child: IconButton(
-                            icon: started
-                                ? Icon(Icons.pause)
-                                : Icon(Icons.play_arrow),
-                            color: Colors.white,
-                            onPressed: () {
+                ElevatedButton(
+                    child: IconButton(
+                        icon: Icon(Icons.horizontal_rule),
+                        color: Colors.white,
+                        onPressed: started
+                            ? null
+                            : () {
+                                setState(() {
+                                  if (numberOfRows > 2) {
+                                    numberOfRows--;
+                                  }
+                                });
+                              }),
+                    onPressed: started ? null : () {}),
+                ElevatedButton(
+                    child: IconButton(
+                        icon: started
+                            ? Icon(Icons.pause)
+                            : Icon(Icons.play_arrow),
+                        color: Colors.white,
+                        onPressed: () {
+                          setState(() {
+                            started = !started;
+                            counter++;
+                            if (counter <= 1) {
+                              isEmptyValue =
+                                  random.nextInt(pow(numberOfRows, 2) - 1);
+                            }
+                          });
+                        }),
+                    onPressed: () {}),
+                ElevatedButton(
+                  child: IconButton(
+                      icon: Icon(Icons.add),
+                      color: Colors.white,
+                      onPressed: started
+                          ? null
+                          : () {
                               setState(() {
-                                started = !started;
-                                counter++;
-                                if (counter <= 1) {
-                                  isEmptyValue =
-                                      random.nextInt(pow(numberOfRows, 2) - 1);
+                                if (numberOfRows < 10) {
+                                  numberOfRows++;
                                 }
                               });
                             }),
-                        onPressed: () {})),
-                SizedBox(
-                    width: 40,
-                    height: 40,
-                    child: RaisedButton(
-                      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-                      color: Colors.blue,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(30))),
-                      child: IconButton(
-                          icon: Icon(Icons.add),
-                          color: Colors.white,
-                          onPressed: started
-                              ? null
-                              : () {
-                                  setState(() {
-                                    if (numberOfRows < 10) {
-                                      numberOfRows++;
-                                    }
-                                  });
-                                }),
-                      onPressed: started ? null : () {},
-                    )),
+                  onPressed: started ? null : () {},
+                ),
               ]),
               SizedBox(
                 height: 40,
@@ -167,7 +137,7 @@ class _Exercice7State extends State<Exercice7> {
             ])));
   }
 
-  bool isClickable(int index) {
+  bool isSwappable(int index) {
     return ((isEmptyValue != index) &&
         (((isEmptyValue % numberOfRows != 0) && (index + 1 == isEmptyValue)) ||
             (((isEmptyValue + 1) % numberOfRows != 0) &&
@@ -180,13 +150,15 @@ class _Exercice7State extends State<Exercice7> {
 
   void swapTiles(int index) {
     var tempValue;
-    var tempIndex;
+    setState(() {
+      if (isSwappable(index)) {
+        tempValue = liste[isEmptyValue];
 
-    tempValue = liste[isEmptyValue];
-    tempIndex = isEmptyValue;
-    liste[isEmptyValue] = liste[index];
-    isEmptyValue = index;
-    liste[index] = tempValue;
-    index = tempIndex;
+        liste[isEmptyValue] = liste[index];
+
+        liste[index] = tempValue;
+        isEmptyValue = index;
+      }
+    });
   }
 }
