@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'board.dart';
-
 class Tile {
   int id;
   bool selected;
