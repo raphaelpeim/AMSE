@@ -38,9 +38,9 @@ class _Exercice7State extends State<Exercice7> {
   void initState() {
     super.initState();
     numberOfRows = 3;
-    liste = List.generate(pow(10, 2), (index) => TileWidget(Tile(index)));
-    started = false;
     counter = 0;
+    started = false;
+    liste = List.generate(pow(10, 2), (index) => TileWidget(Tile(index)));
   }
 
   @override
@@ -94,6 +94,7 @@ class _Exercice7State extends State<Exercice7> {
                                 setState(() {
                                   if (numberOfRows > 2) {
                                     numberOfRows--;
+                                    isEmptyValue = 0;
                                   }
                                 });
                               }),
@@ -125,6 +126,7 @@ class _Exercice7State extends State<Exercice7> {
                               setState(() {
                                 if (numberOfRows < 10) {
                                   numberOfRows++;
+                                  isEmptyValue = 0;
                                 }
                               });
                             }),
