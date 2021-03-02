@@ -104,10 +104,10 @@
 				294BA8BB25DA5B0B007814A4 /* Assets.xcassets */,
 				294BA8B825DA5B06007814A4 /* Main.storyboard */,
 				294BA8BD25DA5B0B007814A4 /* LaunchScreen.storyboard */,
-				294BA8B225DA5B06007814A4 /* AppDelegate.swift */,
-				294BA8B425DA5B06007814A4 /* SceneDelegate.swift */,
 				294BA8B625DA5B06007814A4 /* ViewController.swift */,
 				294BA8E525DA75FD007814A4 /* GameCell.swift */,
+				294BA8B225DA5B06007814A4 /* AppDelegate.swift */,
+				294BA8B425DA5B06007814A4 /* SceneDelegate.swift */,
 				294BA8C025DA5B0B007814A4 /* Info.plist */,
 			);
 			path = Projet2048;

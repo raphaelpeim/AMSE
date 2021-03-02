@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Project2048
 //
-//  Created by Raphaël Peim on 01/03/2021.
+//  Created by Raphaël Peim on 15/02/2021.
 //
 
 import UIKit

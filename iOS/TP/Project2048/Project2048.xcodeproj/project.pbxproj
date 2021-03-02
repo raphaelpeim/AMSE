@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2940855B25ED5B94001BB53A /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2940855A25ED5B94001BB53A /* GameCell.swift */; };
 		29C9271425ED02E70072D8B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C9271325ED02E70072D8B1 /* AppDelegate.swift */; };
 		29C9271625ED02E70072D8B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C9271525ED02E70072D8B1 /* SceneDelegate.swift */; };
 		29C9271825ED02E70072D8B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C9271725ED02E70072D8B1 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2940855A25ED5B94001BB53A /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		29C9271025ED02E70072D8B1 /* Project2048.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project2048.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C9271325ED02E70072D8B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29C9271525ED02E70072D8B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,12 +101,13 @@
 		29C9271225ED02E70072D8B1 /* Project2048 */ = {
 			isa = PBXGroup;
 			children = (
-				29C9271325ED02E70072D8B1 /* AppDelegate.swift */,
-				29C9271525ED02E70072D8B1 /* SceneDelegate.swift */,
-				29C9271725ED02E70072D8B1 /* ViewController.swift */,
-				29C9271925ED02E70072D8B1 /* Main.storyboard */,
 				29C9271C25ED02EB0072D8B1 /* Assets.xcassets */,
 				29C9271E25ED02EB0072D8B1 /* LaunchScreen.storyboard */,
+				29C9271925ED02E70072D8B1 /* Main.storyboard */,
+				29C9271725ED02E70072D8B1 /* ViewController.swift */,
+				2940855A25ED5B94001BB53A /* GameCell.swift */,
+				29C9271325ED02E70072D8B1 /* AppDelegate.swift */,
+				29C9271525ED02E70072D8B1 /* SceneDelegate.swift */,
 				29C9272125ED02EB0072D8B1 /* Info.plist */,
 			);
 			path = Project2048;
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29C9271825ED02E70072D8B1 /* ViewController.swift in Sources */,
+				2940855B25ED5B94001BB53A /* GameCell.swift in Sources */,
 				29C9271425ED02E70072D8B1 /* AppDelegate.swift in Sources */,
 				29C9271625ED02E70072D8B1 /* SceneDelegate.swift in Sources */,
 			);

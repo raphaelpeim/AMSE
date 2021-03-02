@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
     @IBOutlet weak var cells: UICollectionView!
     
     var rowsNumber = 4
