@@ -2,78 +2,69 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/etoilefond"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/background"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/backgroundDescription"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/etoilefond" />
-
-    <FrameLayout
-        android:id="@+id/game"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="120dp"
-        tools:layout_editor_absoluteX="95dp">
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/asteroid1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/asteroid1Description"
-            android:translationX="200dp"
-            android:translationY="300dp"
-            app:srcCompat="@drawable/asteroid1" />
-
-        <ImageView
-            android:id="@+id/asteroid2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/asteroid2Description"
-            android:translationX="100dp"
-            android:translationY="200dp"
-            app:srcCompat="@drawable/asteroid2" />
-
-        <ImageView
-            android:id="@+id/spaceShip"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/spaceShipDescription"
-            android:translationX="150dp"
-            android:translationY="550dp"
-            app:srcCompat="@drawable/millenium_condor" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/joystick"
-        android:layout_width="0dp"
-        android:layout_height="120dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game">
-
-        <ImageView
-            android:id="@+id/button"
+        <FrameLayout
+            android:id="@+id/framespaceShip"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:contentDescription="@string/buttonDescription"
-            android:translationY="10dp"
-            app:srcCompat="@drawable/pad_center" />
+            android:layout_height="552dp"
+            android:background="#00FFFFFF">
 
-        <ImageView
-            android:id="@+id/buttonBorder"
+            <ImageView
+                android:id="@+id/Asteroid1"
+                android:layout_width="109dp"
+                android:layout_height="114dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="132dp"
+                android:src="@drawable/asteroid1" />
+
+            <ImageView
+                android:id="@+id/spaceShip"
+                android:layout_width="130dp"
+                android:layout_height="125dp"
+                android:layout_gravity="bottom|center"
+                android:layout_weight="1"
+                android:src="@drawable/tie" />
+
+            <ImageView
+                android:id="@+id/explosion"
+                android:layout_width="161dp"
+                android:layout_height="138dp"
+                android:src="@drawable/explosion"
+                tools:visibility="invisible" />
+
+        </FrameLayout>
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/buttonBorderDescription"
-            app:srcCompat="@drawable/pad_exterior" />
-    </FrameLayout>
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/pad_exterior"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/pad_exterior" />
+
+            <ImageView
+                android:id="@+id/pad_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/pad_center" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

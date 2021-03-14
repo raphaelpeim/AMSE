@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TP2</string>
+
+    <string name="background">Background</string>
+    <string name="asteroid1">Asteroid 1</string>
+    <string name="spaceShip">Spaceship</string>
+    <string name="joystickButton">Joysitck Button</string>
+    <string name="joystickBorder">Joysitck Border</string>
+</resources>
